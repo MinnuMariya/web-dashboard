@@ -1,17 +1,17 @@
 import streamlit as st
 import torch
-from modified_BotRGCN.model import BotRGCN  
 import json
 from langchain.llms import GooglePalm
 from dotenv import load_dotenv
 import os
 from icecream import ic
 
-from proces_data import Twibot20
 from langchain_utils.main import run_pipeline
 
 load_dotenv()
 llm = GooglePalm(model="gemini",temperature=0)
+
+st.title("Detect microtargeting in tweets")
 
 def predict_microtargeting(tweet:str):
     return run_pipeline(tweet,llm)
