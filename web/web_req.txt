@@ -1,0 +1,10 @@
+streamlit
+torch
+torch_geometric
+langchain==0.0.339
+python-dotenv
+icecream
+transformers
+google-generativeai 
+langchain-community
+google-cloud-aiplatform
